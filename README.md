@@ -242,23 +242,8 @@ df
 ![image](https://github.com/user-attachments/assets/f34dead3-a9e7-4417-93b0-52d7c00f9ab4)
 
 
-```
-
-from sklearn.preprocessing import QuantileTransformer
-qt=QuantileTransformer(output_distribution='normal',n_quantiles=891)
-
-df["Moderate Negative Skew"]=qt.fit_transform(df[["Moderate Negative Skew"]])
-
-sm.qqplot(df["Moderate Negative Skew"],line='45')
-plt.show()
-```
-
-# Output
-
-![image](https://github.com/user-attachments/assets/7bd15a3c-549a-4ef3-b2f4-20fd4571d907)
 
 ```
-
 df["Highly Negative Skew_1"]=qt.fit_transform(df[["Highly Negative Skew"]])
 sm.qqplot(df["Highly Negative Skew"],line='45')
 plt.show()
@@ -270,7 +255,6 @@ plt.show()
 
 
 ```
-
 sm.qqplot(df["Highly Negative Skew_1"],line='45')
 plt.show()
 ```
@@ -281,7 +265,6 @@ plt.show()
 
 
 ```
-
 sm.qqplot(np.reciprocal(df["Moderate Negative Skew"]),line='45')
 plt.show()
 ```
