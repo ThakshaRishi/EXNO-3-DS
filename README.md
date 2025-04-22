@@ -166,7 +166,6 @@ df.skew()
 ![image](https://github.com/user-attachments/assets/3c590268-4724-4087-a0b5-a2094d9e5bf2)
 
 ```
-
 np.log(df["Highly Positive Skew"])
 ```
 
@@ -175,7 +174,6 @@ np.log(df["Highly Positive Skew"])
 ![image](https://github.com/user-attachments/assets/0596ac92-5ad4-41f2-af1a-3fefd049307d)
 
 ```
-
 np.reciprocal(df["Moderate Positive Skew"])
 ```
 
@@ -184,7 +182,6 @@ np.reciprocal(df["Moderate Positive Skew"])
 ![image](https://github.com/user-attachments/assets/e94c0bd4-ecb4-44c6-8523-c675937914b0)
 
 ```
-
 np.sqrt(df["Highly Positive Skew"])
 ```
 
@@ -193,7 +190,6 @@ np.sqrt(df["Highly Positive Skew"])
 ![image](https://github.com/user-attachments/assets/a94c2836-3ca2-470c-b57f-9ab1b071f042)
 
 ```
-
 np.square(df["Highly Positive Skew"])
 ```
 
@@ -202,7 +198,6 @@ np.square(df["Highly Positive Skew"])
 ![image](https://github.com/user-attachments/assets/3e6266f4-d40a-47b2-86ff-123bf15d6a56)
 
 ```
-
 df["Highly Positive Skew_boxcox"], parameters=stats.boxcox(df["Highly Positive Skew"])
 df
 ```
@@ -212,12 +207,10 @@ df
 ![image](https://github.com/user-attachments/assets/95a1c735-cc21-43c3-9aab-8f49d49244ce)
 
 ```
-
 df["Moderate Negative Skew_yeojohnson"],parameters=stats.yeojohnson(df["Moderate Negative Skew"])
 ```
 
 ```
-
 import seaborn as sns
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
