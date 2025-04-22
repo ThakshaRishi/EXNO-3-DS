@@ -208,12 +208,14 @@ df
 ```
 
 # Output
+
+![image](https://github.com/user-attachments/assets/95a1c735-cc21-43c3-9aab-8f49d49244ce)
+
 ```
 
 df["Moderate Negative Skew_yeojohnson"],parameters=stats.yeojohnson(df["Moderate Negative Skew"])
 ```
 
-# Output
 ```
 
 import seaborn as sns
@@ -224,13 +226,22 @@ plt.show()
 ```
 
 # Output
-```
 
-sm.qqplot(np.reciprocal(df["Moderate Negative Skew_1"]),line='45')
-plt.show()
+![image](https://github.com/user-attachments/assets/ee37ad98-9902-40dd-85c4-3d65bcbfa6ff)
+
+```
+from sklearn.preprocessing import QuantileTransformer
+qt=QuantileTransformer(output_distribution='normal')
+
+df["Moderate Negative Skew"]=qt.fit_transform(df[["Moderate Negative Skew"]])
+df
 ```
 
 # Output
+
+![image](https://github.com/user-attachments/assets/f34dead3-a9e7-4417-93b0-52d7c00f9ab4)
+
+
 ```
 
 from sklearn.preprocessing import QuantileTransformer
@@ -243,6 +254,9 @@ plt.show()
 ```
 
 # Output
+
+![image](https://github.com/user-attachments/assets/7bd15a3c-549a-4ef3-b2f4-20fd4571d907)
+
 ```
 
 df["Highly Negative Skew_1"]=qt.fit_transform(df[["Highly Negative Skew"]])
@@ -252,6 +266,9 @@ plt.show()
 
 # Output
 
+![image](https://github.com/user-attachments/assets/5e156542-be37-4432-b101-1abe3ebeafaf)
+
+
 ```
 
 sm.qqplot(df["Highly Negative Skew_1"],line='45')
@@ -259,6 +276,9 @@ plt.show()
 ```
 
 # Output
+
+![image](https://github.com/user-attachments/assets/41dc6d20-5d23-430e-b6e3-7ba1ccc68390)
+
 
 ```
 
@@ -268,9 +288,11 @@ plt.show()
 
 # Output
 
+![image](https://github.com/user-attachments/assets/39caa1fd-5090-436b-bde0-be9d336661bb)
 
 
 # RESULT:
-       # INCLUDE YOUR RESULT HERE
+      Thus the given data, Feature Encoding, Transformation process and save the data to a file was performed successfully.
+
 
        
